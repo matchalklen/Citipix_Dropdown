@@ -5,7 +5,7 @@ $(document).ready(function() {
 	$(cities).each(function(index, element){
 		$("select").append("<option value='" + element + "'>" + element + "</option>")
 	//set background based on city selection
-	$("select").click(setBackground);
+	$("select").change(setBackground);
 	});
 });
 
@@ -21,7 +21,7 @@ function setBackground(e) {
 		//set background to .nyc class
 		$("body").attr("class","nyc");
 	}
-	//check if city variable matches SF string	
+	//check if city variable matches SF string
 	else if(city === "SF") {
 		//set background to .sf class
 		$("body").attr("class","sf");
